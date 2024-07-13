@@ -1,0 +1,152 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .cart-item { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            padding: 10px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        .cart-item img { 
+            width: 100px; 
+            height: 150px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            margin-bottom: 10px; 
+        }
+        .cart-item h2 { 
+            font-size: 18px; 
+            margin: 10px 0; 
+        }
+        .cart-item p { 
+            margin: 5px 0; 
+            color: #555; 
+        }
+        .total-price {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+        }
+        .button-section {
+            display: flex;
+            justify-content: space-between; /* Align buttons in a row */
+            align-items: center;
+            width: 100%; /* Ensure buttons take full width of the container */
+            margin-top: 10px;
+        }
+        .remove-btn {
+            height: 42px;
+            width: 100px; /* Adjust width as needed */
+            background-color: red;
+            color: white;
+            font-family: "Roboto";
+            font-weight: bold;
+            border-radius: 12px;
+            font-size: 16px;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+        .price-check {
+            background-color: #01001e;
+            color: white;
+            border-radius: 8px;
+            width: 100px; /* Adjust width as needed */
+            height: 42px;
+            border: 1px solid white;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            cursor: pointer;
+        }
+        .price-check:hover {
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Your Cart</h1></center>
+    <div class="cart-container">
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <div class="total-price">Total Price: $0.00</div>
+    <form id="back-to-shop-form" action="another-main.html">
+        <button type="submit" class="price-check">Back to Another Main</button>
+    </form>
+
+    <script>
+        // Initialize cart and totalPrice from sessionStorage or set default values
+        let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+        let totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
+
+        // Function to display the cart items and total price
+        function updateCartUI() {
+            let cartContent = '';
+            cart.forEach(item => {
+                cartContent += `
+                    <div class="cart-item" data-id="${item.id}">
+                        <img src="${item.image}" alt="${item.title}">
+                        <h2>${item.title}</h2>
+                        <p>$${item.price.toFixed(2)}</p>
+                        <div class="button-section">
+                            <button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button>
+                        </div>
+                    </div>`;
+            });
+
+            // Update cart container with cart items
+            document.querySelector('.cart-container').innerHTML = cartContent;
+        }
+
+        // Function to remove an item from the cart
+        function removeFromCart(itemId) {
+            const removedItemIndex = cart.findIndex(item => item.id === itemId);
+            if (removedItemIndex !== -1) {
+                // Deduct the price of the removed item from totalPrice
+                totalPrice -= cart[removedItemIndex].price;
+
+                // Remove the item from the cart array
+                cart.splice(removedItemIndex, 1);
+
+                // Update sessionStorage with the updated cart and totalPrice
+                sessionStorage.setItem('cart', JSON.stringify(cart));
+
+                // Update total price displayed on the page
+                document.querySelector('.total-price').textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+
+                // Update cart UI
+                updateCartUI();
+
+                alert("Item removed from cart successfully");
+            } else {
+                console.log('Item not found in cart with id:', itemId);
+            }
+        }
+
+        // Event listener to handle form submission for "Back to Another Main" button
+        document.getElementById('back-to-shop-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Redirect to another main page
+            window.location.href = 'another-main.html'; // Replace with your actual another main page URL
+        });
+
+        // Update cart UI on page load
+        updateCartUI();
+
+        // Update total price displayed on the page
+        document.querySelector('.total-price').textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+    </script>
+</body>
+</html>

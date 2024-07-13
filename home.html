@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Books Store</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"></script>
+    </head>
+
+    
+        <style>
+        @import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            /*background-color: #01001e;*/
+            background-color:#01001e;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-left: 15px;
+        }
+
+        #nav-item-1 {
+            color: white;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+        }
+        #nav-item-1:hover
+        {
+            color:blue;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+        }
+
+        #nav-item-2 {
+            color: white;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+        }
+        #nav-item-2:hover
+        {
+            color:blue;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+        }
+
+        #nav-item-3 {
+            color: white;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+        }
+        #nav-item-3:hover
+        {
+            color:blue;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+        }
+
+        #nav-item-4 {
+            color: white;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+            cursor: pointer;
+        }
+        #nav-item-4:hover
+        {
+            color:red;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: normal;
+            cursor: pointer;
+        }
+        
+        .bg-container {
+            background-color: whitesmoke;
+            /* background-image: url("https://w7.pngwing.com/pngs/263/33/png-transparent-red-smoke-material-red-smoke-smoke-background-smoke-light-effect.png"); */
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading {
+            color: balck;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 55px;
+            text-align: center;
+        }
+
+        .content {
+            color: balck;
+            font-family: "Wittgenstein", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 20px;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .books-heading {
+            color: black;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+
+        span {
+            color: orange;
+        }
+        .img-container
+        {
+            padding: 4px;
+        }
+        .books-container {
+            background-color: white;
+            text-align: center;
+        }
+
+        .book-image {
+            height: 80%;
+            width: 80%;
+            background-size: cover;
+        }
+
+        .book-heading {
+            color: black;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 200;
+            font-size: 20px;
+            font-style: normal;
+        }
+
+        .book-price {
+            color: red;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 200;
+            font-size: 18px;
+            font-style: normal;
+        }
+
+        .add-button {
+            width: 90%;
+            height: 42px;
+            background-color: #01001e;
+            color: white;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            font-style: normal;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .add-button:hover{
+            background-color: transparent;
+            border: 1px solid black;
+            color: black;
+        }
+
+        .best-seller-container {
+            background-color: white;
+            text-align: center;
+        }
+
+        .best-seller-heading {
+            color: black;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .best-card {
+            border: 1px solid black;
+            border-radius: 14px;
+            cursor: pointer;
+        }
+        .cart-icon-nav {
+            height: 25px;
+            width: 25px;
+            margin-top: 12px;
+            color: white;
+            margin-left: 12px;
+        }
+
+        .fotter-section {
+            background-color: whitesmoke;
+            /* height: 40vh; */
+            text-align: center;
+        }
+
+        .fotter-heading {
+            color: black;
+            font-family: "Anton SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .fotter-content {
+            color: black;
+            font-style: normal;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .mail-icon {
+            padding-left: 4px;
+        }
+
+        .linkedin-icon {
+            margin-left: 4px;
+        }
+
+        .body-image {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        .cart-icon {
+            font-size: 18px;
+            padding-left: 4px;
+            background-color: transparent;
+            border-style: none;
+        }
+        .cart-icon-nav{
+            font-size: 22px;
+            margin-top: 8px;
+            background-color: transparent;
+            border-style: none;
+        }
+        .cart-icon-container {
+            position: relative;
+            display: inline-block;
+        }
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 4px 10px;
+            font-size: 10px;
+        }
+       
+        .copy-right{
+            background-color:#01001e;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .copy-heading
+        {
+            color: white;
+        }
+        hr{
+            border:1px solid black;
+            width: 100%;
+        }   
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1); 
+            border: 1px solid white;
+            border-radius: 2px;
+            padding: 6px;
+            height: 35px;
+            width: 35px;
+        }
+    </style>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" id="logo" href="#">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVaAWe4kKxwsauX135aHtEa7PWq_w99mYqmQ&s"
+                    class="logo-image" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" id="nav-item-1" href="#home">Home
+                        <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" id="nav-item-2"
+                        href="#popular-books">Popular books</a>
+                    <a class="nav-link" id="nav-item-3"
+                        href="#best-sellers">Best sellers</a>
+                    <a class="nav-link" id="nav-item-4" href="/Dashboard">Logout</a>
+                    <div class="cart-icon-container position-relative">
+                        <button class="cart-icon-nav" onclick="showCart()">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="bg-container" id="home">
+            <h1 class="heading">Welcome to Our Books Store</h1>
+            <p class="content">
+                Welcome to our Book's store online portal! Here, you can browse
+                our
+                extensive collection of books, manage your account, and stay
+                updated on
+                the latest library events and news. Whether you’re a lifelong
+                reader or
+                a new member, we have something for everyone.
+            </p>
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVaAWe4kKxwsauX135aHtEa7PWq_w99mYqmQ&s"
+                class="body-image" />
+        </div>
+
+        <div class="best-seller-container m-4" id="best-sellers">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h1 class="best-seller-heading pb-3">Best <span>Sellers</span></h1>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="1"
+                            data-title="Three Men in a Boat"
+                            data-info="Three Men in a Boat (To Say Nothing of the Dog), published in 1889, is a humorous novel by English writer Jerome K. Jerome describing a two-week boating holiday on the Thames from Kingston upon Thames to Oxford and back to Kingston. The book was initially intended to be a serious travel guide,[2] with accounts of local history along the route, but the humorous elements took over to the point where the serious and somewhat sentimental passages seem a distraction to the comic novel. One of the most praised things about Three Men in a Boat is how undated it appears to modern readers – the jokes have been praised as fresh and witty "
+                            data-price="$99.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/9Nro9JJzjAoTTO5R%7C5.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/9Nro9JJzjAoTTO5R%7C5.jpg" class="book-image" id="myImage" />
+                                <h1 class="book-heading">Three Men in aBoat</h1>
+                                <p class="book-price">$99.00</p>
+                            </div>
+                            <div class="icon-cart">
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="2"
+                            data-title="As a Man Thinketh"
+                            data-info="As a Man Thinketh is a self-help[1] book by James Allen, published in 1903. It was described by Allen as ... [dealing] with the power of thought, and particularly with the use and application of thought to happy and beautiful issues. I have tried to make the book simple, so that all can easily grasp and follow its teaching, and put into practice the methods which it advises. It shows how, in his own thought-world, each man holds the key to every condition, good or bad, that enters into his life, and that, by working patiently and intelligently upon his thoughts, he may remake his life, and transform his circumstances. The price of the book is only one shilling, and it can be carried in the pocket."
+                            data-price="$59.00"
+                            data-image="https://i0.wp.com/pageaters.com/wp-content/uploads/2024/01/as-a-man-thinketh-YZywOi0OrS-1688481118524.jpg?fit=2367%2C2560&ssl=1">
+                            <div class="img-container">
+                                <img src="https://i0.wp.com/pageaters.com/wp-content/uploads/2024/01/as-a-man-thinketh-YZywOi0OrS-1688481118524.jpg?fit=2367%2C2560&ssl=1" class="book-image" id="image2" />
+                                <h1 class="book-heading">As a Man Thinketh</h1>
+                                <p class="book-price">$59.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="3"
+                            data-title="A Passage To India"
+                            data-info="The story revolves around four characters: Dr. Aziz, his British friend Mr. Cyril Fielding, Mrs. Moore, and Miss Adela Quested. During a trip to the fictitious Marabar Caves (modeled on the Barabar Caves of Bihar),[7] Adela thinks she finds herself alone with Dr. Aziz in one of the caves (when in fact he is in an entirely different cave; whether the attacker is real or a reaction to the cave is ambiguous), and subsequently panics and flees; it is assumed that Dr. Aziz has attempted to assault her. Aziz's trial, and its run-up and aftermath, bring to a boil the common racial tensions and prejudices between Indians and the British during the colonial era."
+                            data-price="$189.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/SgZD7wLYNIwK97u8%7C71K-InZRoUL.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/SgZD7wLYNIwK97u8%7C71K-InZRoUL.jpg" class="book-image" id="image3" />
+                                <h1 class="book-heading">A Passage To India</h1>
+                                <p class="book-price">$189.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3" 
+                            data-id="4" data-title="The Art of War"
+                            data-info="The book was translated into French and published in 1772 by the French Jesuit Jean Joseph Marie Amiot; it was re-published in 1782. A partial translation into English was attempted by British officer Everard Ferguson Calthrop in 1905 under the title The Book of War. The first annotated English translation was completed and published by Lionel Giles in 1910.[7] Military and political leaders such as the Chinese communist revolutionary Mao Zedong, Japanese daimyō Takeda Shingen, Vietnamese general Võ Nguyên Giáp, and American military generals Douglas MacArthur and Norman Schwarzkopf Jr. are all cited as having drawn inspiration from the book."
+                            data-price="$39.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/HqU0EVvijKqWdorm%7C1.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/HqU0EVvijKqWdorm%7C1.jpg" class="book-image" id="image4" />
+                                <h1 class="book-heading">The Art of War</h1>
+                                <p class="book-price">$39.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="books-container m-4" id="popular-books">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h1 class="books-heading pb-3">Popular <span>Books</span></h1>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="5"
+                            data-title="Three Men in a Boat"
+                            data-info="Three Men in a Boat (To Say Nothing of the Dog),[Note 1] published in 1889,[1] is a humorous novel by English writer Jerome K. Jerome describing a two-week boating holiday on the Thames from Kingston upon Thames to Oxford and back to Kingston. The book was initially intended to be a serious travel guide,[2] with accounts of local history along the route, but the humorous elements took over to the point where the serious and somewhat sentimental passages seem a distraction to the comic novel. One of the most praised things about Three Men in a Boat is how undated it appears to modern readers – the jokes have been praised as fresh and witty."
+                            data-price="$99.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/9Nro9JJzjAoTTO5R%7C5.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/9Nro9JJzjAoTTO5R%7C5.jpg" class="book-image" />
+                                <h1 class="book-heading">Three Men in a Boat</h1>
+                                <p class="book-price">$99.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3" 
+                            data-id="6" 
+                            data-title="Othello"
+                            data-info="Othello is a Moorish military commander who was serving as a general of the Venetian army in defence of Cyprus against invasion by Ottoman Turks. He had recently married Desdemona, a beautiful and wealthy Venetian lady younger than himself, without the knowledge of and despite the later objection of her father. Iago is Othello's malevolent ensign, who maliciously stokes his master's jealousy until the usually stoic Othello kills his beloved wife in a fit of blind rage. Due to its enduring themes of passion, jealousy, and race, Othello is still topical and popular and is widely performed, with numerous adaptations."
+                            data-price="$70.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/QShoIhh4WPwnKb82%7C71cH7dI2kIS.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/QShoIhh4WPwnKb82%7C71cH7dI2kIS.jpg" class="book-image" />
+                                <h1 class="book-heading">Othello</h1>
+                                <p class="book-price">$70.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3" 
+                            data-id="7" 
+                            data-title="Nationalism"
+                            data-info="“And yet I will persist in believing-that there is such a thing as the harmony of completeness in humanity..”A compendium of lectures delivered by Tagore during the First World War and the Swadeshi movement in India, Nationalism emphasises Tagore’s political and philosophical views on human understanding and its weakness for power and material hoardings. Packed with erudition and analysis, it expounds the idea of a moral and spiritual growth for human welfare. the lectures—written in a lucid, metaphoric, poetic prose—are loaded with a piercing vision of the future and are a critique on his views on spirituality and humanity.Tagore was a farsighted visionary."
+                            data-price="$69.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/pJbSH5L3KUwFl7Tf%7C1.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/pJbSH5L3KUwFl7Tf%7C1.jpg" class="book-image" />
+                                <h1 class="book-heading">Nationalism</h1>
+                                <p class="book-price">$69.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="8"
+                            data-title="As a Man Thinketh"
+                            data-info="As a Man Thinketh is a self-help[1] book by James Allen, published in 1903. It was described by Allen as ... [dealing] with the power of thought, and particularly with the use and application of thought to happy and beautiful issues. I have tried to make the book simple, so that all can easily grasp and follow its teaching, and put into practice the methods which it advises. It shows how, in his own thought-world, each man holds the key to every condition, good or bad, that enters into his life, and that, by working patiently and intelligently upon his thoughts, he may remake his life, and transform his circumstances. The price of the book is only one shilling, and it can be carried in the pocket"
+                            data-price="$59.00"
+                            data-image="https://i0.wp.com/pageaters.com/wp-content/uploads/2024/01/as-a-man-thinketh-YZywOi0OrS-1688481118524.jpg?fit=2367%2C2560&ssl=1">
+                            <div class="img-container">
+                                <img src="https://i0.wp.com/pageaters.com/wp-content/uploads/2024/01/as-a-man-thinketh-YZywOi0OrS-1688481118524.jpg?fit=2367%2C2560&ssl=1" class="book-image" />
+                                <h1 class="book-heading">As a Man Thinketh</h1>
+                                <p class="book-price">$59.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="9"
+                            data-title="The Jungle Book book"
+                            data-info="A major theme in the book is abandonment followed by fostering, as in the life of Mowgli, echoing Kipling's own childhood. The theme is echoed in the triumph of protagonists including Rikki-Tikki-Tavi and The White Seal over their enemies, as well as Mowgli's. Another important theme is of law and freedom; the stories are not about animal behaviour, still less about the Darwinian struggle for survival, but about human archetypes in animal form. They teach respect for authority, obedience, and knowing one's place in society with the law of the jungle, but the stories also illustrate the freedom to move between different worlds."
+                            data-price="$99.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/cvLwYNXyje5f45bW%7C2.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/cvLwYNXyje5f45bW%7C2.jpg" class="book-image" />
+                                <h1 class="book-heading">The Jungle Book book</h1>
+                                <p class="book-price">$99.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="10"
+                            data-title="The Story of My  Life"
+                            data-info="The Story of My Life Summary: The Story of my life is the story of Helen Keller who triumphed over adversity and became world famous. She was born on June 27, 1880 in Tuscumbia, Alabama. Her parents were Captain Arthur Henry Keller, a confederate army veteran and a newspaper editor and Kate Adams Keller. She was born as a normal child. But at the age of 19 months, she suffered an illness that left her deaf and blind. Her family wondered how a deaf and blind child could be educated.At the age of six, her mother managed to get a teacher, Anne Sullivan, to teach Helen."
+                            data-price="$149.00"
+                            data-image="https://www.eurekabookstore.com/public/uploads/products/2022/10/14179/keller4.jpg">
+                            <div class="img-container">
+                                <img src="https://www.eurekabookstore.com/public/uploads/products/2022/10/14179/keller4.jpg" class="book-image"/>
+                                <h1 class="book-heading">The Story of My Life</h1>
+                                <p class="book-price">$149.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="11"
+                            data-title="The Sherlock Holmes"
+                            data-info="The Adventures of Sherlock Holmes is a collection of twelve short stories by Arthur Conan Doyle, first published on 14 October 1892. It contains the earliest short stories featuring the consulting detective Sherlock Holmes, which had been published in twelve monthly issues of The Strand Magazine from July 1891 to June 1892. The stories are collected in the same sequence, which is not supported by any fictional chronology. The only characters common to all twelve are Holmes and Dr. Watson and all are related in first-person narrative from Watson's point of view."
+                            data-price="$136.00"
+                            data-image="https://img.etimg.com/photo/msid-99872974,imgsize-177704/TheCompleteNovelsofSherlockHolmes(DeluxeHardboundEdition)byArthurConanDoyle.jpg">
+                            <div class="img-container">
+                                <img src="https://img.etimg.com/photo/msid-99872974,imgsize-177704/TheCompleteNovelsofSherlockHolmes(DeluxeHardboundEdition)byArthurConanDoyle.jpg" class="book-image" />
+                                <h1 class="book-heading">The Sherlock Holmes</h1>
+                                <p class="book-price">$136.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3" 
+                            data-id="12" 
+                            data-title="Relativity"
+                            data-info="It is known as special relativity because it applies only to special cases: frames of reference in constant, unchanging motion. In 1915, Einstein published the general theory of relativity, which applies to frames that are accelerating with regard to each other. Time does not pass at the same rate for everyone.‘When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity.’Dealing with the theory of relativity—special relativity and general relativity—and the considerations on the universe as a whole, this book gives an insight into the scientific theory."
+                            data-price="$129.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/il0F5AytRzE9fdoO%7C1.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/il0F5AytRzE9fdoO%7C1.jpg" class="book-image" />
+                                <h1 class="book-heading">Relativity</h1>
+                                <p class="book-price">$129.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="13"
+                            data-title="Origin of Species"
+                            data-info="Darwin s theory is based on the notion of variation. It argues that the numerous traits and adaptations that differentiate species from each other also explain how species evolved over time and gradually diverged. Variations in organisms are apparent both within domesticated species and within species throughout the natural world. Variations in colors, structures, organs, and physical traits differentiate a multitude of species from one another. Heredity is the mechanism that perpetuates variations, Darwin argues, as traits are passed from parents to offspring. What is important about these variations to Darwin, though, is the way they allow species to adapt and survive in the natural world."
+                            data-price="$159.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/pihstQgqSOde2WFB%7C1.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/pihstQgqSOde2WFB%7C1.jpg" class="book-image" />
+                                <h1 class="book-heading">Origin of Species</h1>
+                                <p class="book-price">$159.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3" 
+                            data-id="14" 
+                            data-title="The Art of War"
+                            data-info="The book was translated into French and published in 1772 by the French Jesuit Jean Joseph Marie Amiot; it was re-published in 1782. A partial translation into English was attempted by British officer Everard Ferguson Calthrop in 1905 under the title The Book of War. The first annotated English translation was completed and published by Lionel Giles in 1910.[7] Military and political leaders such as the Chinese communist revolutionary Mao Zedong, Japanese daimyō Takeda Shingen, Vietnamese general Võ Nguyên Giáp, and American military generals Douglas MacArthur and Norman Schwarzkopf Jr. are all cited as having drawn inspiration from the book."
+                            data-price="$39.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/HqU0EVvijKqWdorm%7C1.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/HqU0EVvijKqWdorm%7C1.jpg" class="book-image" />
+                                <h1 class="book-heading">The Art of War</h1>
+                                <p class="book-price">$39.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="15"
+                            data-title="A Little Princess"
+                            data-info="A Little Princess is a children's novel by Frances Hodgson Burnett, first published as a book in 1905. It is an expanded version of the short story Sara Crewe: or, What Happened at Miss Minchin s, which was serialized in St. Nicholas Magazine from December 1887, and published in book form in 1888. According to Burnett, after she composed the 1902 play A Little Un-fairy Princess based on that story, her publisher asked that she expand the story as a novel with the things and people that had been left out before. Captain Ralph Crewe, a wealthy English widower, has been raising his only child, Sara, in India where he is stationed with the British Army."
+                            data-price="$139.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/OeHGkKjbw76Fu6li%7C71gkdmrYTrL.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/OeHGkKjbw76Fu6li%7C71gkdmrYTrL.jpg" class="book-image" />
+                                <h1 class="book-heading">A Little Princess</h1>
+                                <p class="book-price">$139.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="16"
+                            data-title="A Passage To India"
+                            data-info="The story revolves around four characters: Dr. Aziz, his British friend Mr. Cyril Fielding, Mrs. Moore, and Miss Adela Quested. During a trip to the fictitious Marabar Caves (modeled on the Barabar Caves of Bihar),[7] Adela thinks she finds herself alone with Dr. Aziz in one of the caves (when in fact he is in an entirely different cave; whether the attacker is real or a reaction to the cave is ambiguous), and subsequently panics and flees; it is assumed that Dr. Aziz has attempted to assault her. Aziz's trial, and its run-up and aftermath, bring to a boil the common racial tensions and prejudices between Indians and the British during the colonial era."
+                            data-price="$189.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/SgZD7wLYNIwK97u8%7C71K-InZRoUL.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/SgZD7wLYNIwK97u8%7C71K-InZRoUL.jpg" class="book-image" />
+                                <h1 class="book-heading">A Passage To India</h1>
+                                <p class="book-price">$189.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>                      
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="17"
+                            data-title="The Silent Hills"
+                            data-info="The dead do not rest till they get what they want. You have arrived in the hills. In here, you are surrounded by dense, menacing forests, enveloped in a deadly silence... You never know what lurks here in the Cold, dark night. Do not walk alone after sunset in the hills. A beautiful woman in white haunts the Lonely pathways, looking to enchant and ensnare men... All the people who died in accidents here... They say you hear their screams at night. And the deserted lodges sitting amidst lush greenery and calm streams... Spirits lie in wait here, ready to prey on the living. There are sceptics who did not heed these warnings."
+                            data-price="$159.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/rpXLx3xlXM1iWs5h%7C71NUqTiGrOL.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/rpXLx3xlXM1iWs5h%7C71NUqTiGrOL.jpg" class="book-image" />
+                                <h1 class="book-heading">The Silent Hills</h1>
+                                <p class="book-price">$159.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3" 
+                            data-id="18" 
+                            data-title="Treasure Island"
+                            data-info="Think of the high seas and of a buccaneer ship; of a wild seaman with a sea chest full of gold; of Long John Silver; of a buried treasure and of young Jim Hawkins, the boy with the treasure map the key to it all. This is the Treasure Island and if you don't think of all this, the pirates will hunt you down and when they find you, for find you they sure will, they will trust you and carry you back to their ship and just before they feed you to the sharks, as you walk the gangplank with a sword digging sharp and sure into your back, they will sing their one last song for you. "
+                            data-price="$169.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/cqpteRf6VzYXJeLC%7C71+f+GXLk4L.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/cqpteRf6VzYXJeLC%7C71+f+GXLk4L.jpg" class="book-image" />
+                                <h1 class="book-heading">Treasure Island</h1>
+                                <p class="book-price">$169.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3" 
+                            data-id="19" 
+                            data-title="Naruto 3 In 1 Edition"
+                            data-info="The world’s most popular ninja comic! Naruto is a young shinobi with an incorrigible knack for mischief. He’s got a wild sense of humor, but Naruto is completely serious about his mission to be the world’s greatest ninja! Twelve years ago the Village Hidden in the Leaves was attacked by a fearsome threat. A nine-tailed fox spirit claimed the lives of the village leader, the Hokage, and many others. Today, the village is at peace and a troublemaking kid named Naruto is struggling to graduate from Ninja Academy. "
+                            data-price="$249.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/VNRc4YS0sXdnbmUM%7Cnaruto-manga.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/VNRc4YS0sXdnbmUM%7Cnaruto-manga.jpg" class="book-image" />
+                                <h1 class="book-heading">Naruto 3 In 1 Edition</h1>
+                                <p class="book-price">$249.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="best-card mb-3"
+                            data-id="20"
+                            data-title="Dragon Ball Vol 1"
+                            data-info="Before there was Dragon Ball Z, there was Akira Toriyama’s action epic Dragon Ball, starring the younger version of Son Goku and all the other Dragon Ball Z heroes! Meet a naive young monkey-tailed boy named Goku, whose quiet life changes when he meets Bulma, a girl who is on a quest to collect seven “Dragon Balls.” If she gathers them all, an incredibly powerful dragon will appear and grant her one wish. But the precious orbs are scattered all over the world, and Bulma needs Goku’s help (and his super-strength)! With a magic staff for a weapon and a flying cloud for a ride, Goku sets out on the adventure of a lifetime…"
+                            data-price="$299.00"
+                            data-image="https://cdn.chec.io/merchants/28663/assets/VkMTmBy9ZSPbSnZn%7Cdragon-ball-manga-vol-1-by-akira-toriyama.jpg">
+                            <div class="img-container">
+                                <img src="https://cdn.chec.io/merchants/28663/assets/VkMTmBy9ZSPbSnZn%7Cdragon-ball-manga-vol-1-by-akira-toriyama.jpg" class="book-image" />
+                                <h1 class="book-heading">Dragon Ball Vol 1</h1>
+                                <p class="book-price">$299.00</p>
+                            </div>
+                            <div>
+                                <button class="add-button" onclick="addToCart(this)">ADD TO CART<i class="fa-solid fa-cart-shopping cart-icon"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fotter-section pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 mb-3">
+                        <h1 class="fotter-heading">SHOP NOW</h1>
+                        <h1 class="fotter-content">
+                            Creating a library management system using HTML,
+                            CSS, and
+                            JavaScript involves building a web application that
+                            allows users
+                            to manage and access library resources. Here are the
+                            main
+                            components and features you might consider including
+                            in your site,
+                            along with some example code snippets to get you
+                            started.
+                        </h1>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4 mb-3">
+                        <h1 class="fotter-heading">PRODUCTS</h1>
+                        <h1 class="fotter-content">SHOP NOW</h1>
+                        <h1 class="fotter-content">PORTFOLIO</h1>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4 mb-3">
+                        <h1 class="fotter-heading">CONTACT</h1>
+                        <h1 class="fotter-content">
+                            <i class="fa-regular fa-envelope mail-icon"></i>
+                            <a href="mailto:suryanagulapalli40@gmail.com" style="text-decoration:none; color:inherit;">
+                                suryanagulapalli40@gmail.com
+                            </a>
+                        </h1>
+                        <h1 class="fotter-content">
+                            <i class="fa-brands fa-linkedin linkedin-icon"></i>
+                            <a href="https://www.linkedin.com/in/surya-nagulapalli/" target="_blank" style="text-decoration:none; color:inherit;">Linkedin</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="copy-right">
+            <center><p class="copy-heading">&copy; 2024 Surya Nagulapalli. All rights reserved.</p></center>
+        </div>
+
+
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const sessionCart = JSON.parse(sessionStorage.getItem('cart'));
+                if (sessionCart) {
+                    document.getElementById('cart-count').textContent = sessionCart.length;
+                }
+            });
+
+
+            document.querySelectorAll('.img-container').forEach(imgContainer => {
+                imgContainer.addEventListener('click', function() {
+                    const card = this.closest('.best-card');
+                    showInformation(card);
+                });
+            });
+            
+            function showInformation(card) {
+                // Extract information from the clicked card using data attributes
+                const bookTitle = card.getAttribute('data-title');
+                const bookInfo = card.getAttribute('data-info');
+                const bookPrice = card.getAttribute('data-price');
+                const imageUrl = card.getAttribute('data-image');
+            
+                // Construct HTML content for the new tab
+                const content = `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <title>${bookTitle}</title>
+                      <style>
+                        @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap');
+                        * {
+                          font-family: Arial, sans-serif;
+                          padding: 0;
+                          margin: 0;
+                          box-sizing:border-sizing;
+                        }
+                          body
+                        {
+                        height:100vh;
+                          display: flex;
+                          flex-direction:row;
+                          justify-content: center;
+                          align-items: center;
+                        }
+
+                        @media screen and (max-width:980px){
+                          .card-container {
+                          display: flex;
+                          flex-direction:column;
+                          justify-content: center;
+                          align-items: center;
+                          height: 90vh;
+                          width: 80vw;
+                          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                          transition: box-shadow 0.3s ease-in-out;
+                          cursor: pointer;
+                          background-color: white;
+                          border: 1px solid black;
+                          border-radius: 12px;
+                        }
+                        .card-container:hover {
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                        }
+                        .image-container {
+                          height: 45%;
+                          width: 100%;
+                          display:flex;
+                          justify-content: center;
+                          align-items: center;
+                        }
+                        .information {
+                          height: 55%;
+                          width: 100%;
+                          padding: 20px;
+                          display: flex;
+                          flex-direction:column;
+                          justify-content: center;
+                          align-items: center;
+                        }
+                        .book-image {
+                          height:220px;
+                          width: 220px;
+                          border-top-left-radius:12px;
+                          border-bottom-left-radius:12px;
+                          object-fit: cover;
+                        }
+                        .book-title {
+                          color: black;
+                          font-family: "Anton SC", sans-serif;
+                          font-weight: 200;
+                          font-size: 22px;
+                          font-style: normal;
+                          text-align: center;
+                          padding-top: 12px;
+                        }
+                          .book-price {
+                          color: red;
+                          padding-top: 12px;
+                          font-family: "Anton SC", sans-serif;
+                          font-weight: bold;
+                          font-size: 18px;
+                          text-align: center;
+                          font-style: normal;
+                        }
+                        .book-info {
+                          color: black;
+                          margin:12px;
+                          padding-top: 12px;
+                          font-family: "Anton SC", sans-serif;
+                          font-size: 12px;
+                          text-align: center;
+                        }
+                        .price-check {
+                          background-color: #01001e;
+                          color: white;
+                          border-radius: 8px;
+                          width: 120px;
+                          height: 43px;
+                          border: 1px solid white;
+                          font-family: "Anton SC", sans-serif;
+                          font-weight: 400;
+                          font-style: normal;
+                          margin-bottom:12px;
+                          margin-left: 12px;
+                          margin-top: 16px;
+                          cursor: pointer;
+                        }
+                        .button-section {
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;  
+                        }
+                        .price-check:hover {
+                            color: black;
+                            background-color: white;
+                            border: 1px solid black;
+                        }
+                        }
+
+                        @media screen and (min-width:981px){
+                        .card-container {
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          height: 70vh;
+                          width: 70vw;
+                          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                          transition: box-shadow 0.3s ease-in-out;
+                          cursor: pointer;
+                          background-color: white;
+                          border: 1px solid black;
+                          border-radius: 12px;
+                        }
+                        .card-container:hover {
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                        }
+                        .image-container {
+                          height: 100%;
+                          width: 40%;
+                        }
+                        .information {
+                          height: 100%;
+                          width: 60%;
+                          padding: 20px;
+                          display: flex;
+                          flex-direction:column;
+                          justify-content: center;
+                          align-items: center;
+                        }
+                        .book-image {
+                          height: 100%;
+                          width: 100%;
+                          border-top-left-radius:12px;
+                          border-bottom-left-radius:12px;
+                          object-fit: cover;
+                        }
+                        .book-title {
+                          color: black;
+                          font-family: "Anton SC", sans-serif;
+                          font-weight: 200;
+                          font-size: 30px;
+                          font-style: normal;
+                          text-align: center;
+                          padding-top: 12px;
+                        }
+                        .book-price {
+                          color: red;
+                          padding-top: 12px;
+                          font-family: "Anton SC", sans-serif;
+                          font-weight: bold;
+                          font-size: 18px;
+                          text-align: center;
+                          font-style: normal;
+                        }
+                        .book-info {
+                          color: black;
+                          padding-top: 12px;
+                          font-family: "Anton SC", sans-serif;
+                          font-size: 14px;
+                          text-align: center;
+                        }
+                        .price-check {
+                          background-color: #01001e;
+                          color: white;
+                          border-radius: 8px;
+                          width: 180px;
+                          height: 43px;
+                          border: 1px solid white;
+                          font-family: "Anton SC", sans-serif;
+                          font-weight: 400;
+                          font-style: normal;
+                          margin-left: 12px;
+                          margin-top: 16px;
+                          cursor: pointer;
+                        }
+                        .button-section {
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;  
+                        }
+                        .price-check:hover {
+                            color: black;
+                            background-color: white;
+                            border: 1px solid black;
+                        }
+                      }
+                      </style>
+                    </head>
+                    <body>
+                      <div class="card-container">
+
+                        <div class="image-container">
+                          <img src="${imageUrl}" alt="${bookTitle}" class="book-image">
+                        </div>
+
+                        <div class="information">
+                          <h2 class="book-title">${bookTitle}</h2>
+                          <p class="book-info">${bookInfo}</p>
+                          <p class="book-price">${bookPrice}</p>
+                          <div class="button-section">
+                            <form action="buy">
+                                <button class="price-check">Buy Now</button>
+                            </form>
+                            <form action="home">
+                               <button class="price-check">Back TO Shop</button>
+                            </form>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </body>
+                    </html>
+                `;
+            
+                // Open a new window/tab with the constructed content
+                
+                document.open();
+                document.write(content);
+                document.close();
+            }
+
+            let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+            let totalPrice = parseFloat(sessionStorage.getItem('totalPrice')) || 0;
+            
+            function addToCart(button) {
+                const card = button.closest('.best-card');
+                const id = card.getAttribute('data-id');
+                const title = card.getAttribute('data-title');
+                const info = card.getAttribute('data-info');
+                const price = parseFloat(card.getAttribute('data-price').replace('$', ''));
+                const image = card.getAttribute('data-image');
+            
+                const item = { id, title, info, price, image };
+                cart.push(item);
+            
+                totalPrice += price;
+                document.getElementById('cart-count').textContent = cart.length;
+            
+                sessionStorage.setItem('cart', JSON.stringify(cart));
+                sessionStorage.setItem('totalPrice', totalPrice.toFixed(2));
+            
+                alert("ITEM ADDED TO CART SUCCESSFULLY");
+                console.log('Item added to cart:', item);
+            }
+
+            function removeFromCart(itemId) {
+                const itemIndex = cart.findIndex(item => item.id === itemId);
+                if (itemIndex !== -1) {
+                    const itemPrice = cart[itemIndex].price;
+                    cart.splice(itemIndex, 1);
+                    totalPrice -= itemPrice;
+                    sessionStorage.setItem('cart', JSON.stringify(cart));
+                    sessionStorage.setItem('totalPrice', totalPrice.toFixed(2));
+            
+                    alert("ITEM REMOVED FROM CART SUCCESSFULLY");
+            
+                    // Re-render the cart after removing the item
+                    showCart();
+                }
+            }
+            
+            function showCart() {
+                let cartContent = `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Your Cart</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; margin: 20px; }
+                            .cart-item { 
+                                display: flex; 
+                                flex-direction: column; 
+                                align-items: center; 
+                                justify-content:center;
+                                border: 1px solid #ccc; 
+                                height:30%;
+                                width:90%;
+                                border-radius: 8px; 
+                                padding: 10px; 
+                                margin-bottom: 20px;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+                            }
+                            .cart-item img { 
+                                width: 100px; 
+                                height: 180px; 
+                                object-fit: cover; 
+                                border-radius: 8px; 
+                                margin-bottom: 10px; 
+                            }
+                            .cart-item h2 { 
+                                font-size: 18px; 
+                                margin: 10px 0; 
+                            }
+                            .cart-item p { 
+                                margin: 5px 0; 
+                                color: #555; 
+                            }
+                            .total-price {
+                                font-size: 18px;
+                                font-weight: bold;
+                                text-align: right;
+                            }
+                            .button-section {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                               
+                            }
+                            .remove-btn {
+                                height: 42px;
+                               padding:12px;
+                                background-color: red;
+                                color: white;
+                                font-family: "Roboto";
+                                font-weight: bold;
+                                border-radius: 12px;
+                                font-size: 16px;
+                                border: 1px solid white;
+                                cursor: pointer;
+                                margin-top: 16px;
+                                margin-left: 22px;
+                            }
+                            .price-check:hover {
+                               color: black;
+                            background-color: white;
+                            border: 1px solid black;
+                        }
+                            .remove-btn:hover{
+                            color: black;
+                            background-color: white;
+                            border: 1px solid black;
+                            }
+                            .price-check {
+                          background-color: #01001e;
+                          color: white;
+                          border-radius: 8px;
+                          height: 43px;
+                          border: 1px solid white;
+                          font-family: "Anton SC", sans-serif;
+                          font-weight: 400;
+                          font-style: normal;
+                          margin-left: 22px;
+                          margin-top: 16px;
+                          cursor: pointer;
+                          padding:12px;
+                        }
+                          .information-container
+                          {
+                          display:flex;
+                          flex-direction:column;
+                          justify-content: center;
+                        align-items: center;
+                          }
+                        .cart-container
+                        {
+                        display:flex;
+                        flex-direction:column;
+                        justify-content: center;
+                        align-items: center;
+                        }
+                        </style>
+                    </head>
+                    <body>
+                        <center><h1>Your Cart</h1></center>
+                        <div class="cart-container">`;
+            
+                cart.forEach(item => {
+                    cartContent += `
+                        <div class="cart-item" data-id="${item.id}">
+                            <div class="information-container">
+                                <img src="${item.image}" alt="${item.title}">
+                            <h2>${item.title}</h2>
+                            <p>$${item.price.toFixed(2)}</p>
+                            </div>
+                            <div class="button-section">
+                                <form action="home">
+                               <button class="price-check">Back To Shop</button>
+                            </form>
+                                 <button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button>
+                            </div>
+                        </div>`;
+                });
+            
+                cartContent += `
+                        </div>
+            
+                        <div class="total-price">Total Price: $${totalPrice.toFixed(2)}</div>
+                    </body>
+                    </html>`;
+            
+                    document.open();
+                    document.write(cartContent);
+                    document.close();
+
+            
+                    function backToShop() {
+                        window.location.href = 'home';
+                    }
+                    
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const sessionCart = JSON.parse(sessionStorage.getItem('cart'));
+                        const sessionTotalPrice = parseFloat(sessionStorage.getItem('totalPrice'));
+                    
+                        if (sessionCart) {
+                            cart = sessionCart;
+                            totalPrice = sessionTotalPrice;
+                        }
+                    
+                        document.getElementById('cart-count').textContent = cart.length;
+                    });
+            
+        }
+    </script>
+</body>
+
+</html>
