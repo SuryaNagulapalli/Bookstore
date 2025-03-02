@@ -32,313 +32,241 @@
         <style>
         @import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap");
 
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
+       * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
-        .navbar {
-            /*background-color: #01001e;*/
-            background-color:#01001e;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-style: normal;
-        }
+.navbar {
+    background-color: #01001e;
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
 
-        .logo-image {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            margin-left: 15px;
-        }
+.logo-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
 
-        #nav-item-1 {
-            color: white;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-        }
-        #nav-item-1:hover
-        {
-            color:blue;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-        }
+#nav-item-1, #nav-item-2, #nav-item-3, #nav-item-4 {
+    color: white;
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: normal;
+}
 
-        #nav-item-2 {
-            color: white;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-        }
-        #nav-item-2:hover
-        {
-            color:blue;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-        }
+#nav-item-1:hover, #nav-item-2:hover, #nav-item-3:hover {
+    color: blue;
+}
 
-        #nav-item-3 {
-            color: white;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-        }
-        #nav-item-3:hover
-        {
-            color:blue;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-        }
+#nav-item-4:hover {
+    color: red;
+}
 
-        #nav-item-4 {
-            color: white;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-            cursor: pointer;
-        }
-        #nav-item-4:hover
-        {
-            color:red;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 18px;
-            font-style: normal;
-            cursor: pointer;
-        }
-        
-        .bg-container {
-            background-color: whitesmoke;
-            /* background-image: url("https://w7.pngwing.com/pngs/263/33/png-transparent-red-smoke-material-red-smoke-smoke-background-smoke-light-effect.png"); */
-            height: 100vh;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+.bg-container {
+    background-color: whitesmoke;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        .heading {
-            color: balck;
-            font-family: "Anton SC", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 55px;
-            text-align: center;
-        }
+.heading {
+    color: black;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
+    text-align: center;
+}
 
-        .content {
-            color: balck;
-            font-family: "Wittgenstein", serif;
-            font-optical-sizing: auto;
-            font-weight: bold;
-            font-size: 20px;
-            font-style: normal;
-            text-align: center;
-        }
+.content {
+    color: black;
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+}
 
-        .books-heading {
-            color: black;
-            font-family: "Anton SC", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            text-align: center;
-        }
+.books-heading, .best-seller-heading, .fotter-heading {
+    color: black;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
 
-        span {
-            color: orange;
-        }
-        .img-container
-        {
-            padding: 4px;
-        }
-        .books-container {
-            background-color: white;
-            text-align: center;
-        }
+span {
+    color: orange;
+}
 
-        .book-image {
-            height: 80%;
-            width: 80%;
-            background-size: cover;
-        }
+.img-container {
+    padding: 4px;
+}
 
-        .book-heading {
-            color: black;
-            font-family: "Anton SC", sans-serif;
-            font-weight: 200;
-            font-size: 20px;
-            font-style: normal;
-        }
+.books-container, .best-seller-container {
+    background-color: white;
+    text-align: center;
+}
 
-        .book-price {
-            color: red;
-            font-family: "Anton SC", sans-serif;
-            font-weight: 200;
-            font-size: 18px;
-            font-style: normal;
-        }
+.book-image {
+    height: 80%;
+    width: 80%;
+    background-size: cover;
+}
 
-        .add-button {
-            width: 90%;
-            height: 42px;
-            background-color: #01001e;
-            color: white;
-            font-family: "Anton SC", sans-serif;
-            font-weight: 200;
-            font-size: 16px;
-            font-style: normal;
-            border-radius: 4px;
-            margin-bottom: 8px;
-        }
-        .add-button:hover{
-            background-color: transparent;
-            border: 1px solid black;
-            color: black;
-        }
+.book-heading, .best-seller-heading {
+    color: black;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: normal;
+}
 
-        .best-seller-container {
-            background-color: white;
-            text-align: center;
-        }
+.book-price {
+    color: red;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    font-style: normal;
+}
 
-        .best-seller-heading {
-            color: black;
-            font-family: "Anton SC", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            text-align: center;
-        }
+.add-button {
+    width: 90%;
+    height: 42px;
+    background-color: #01001e;
+    color: white;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    font-style: normal;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
 
-        .best-card {
-            border: 1px solid black;
-            border-radius: 14px;
-            cursor: pointer;
-        }
-        .cart-icon-nav {
-            height: 25px;
-            width: 25px;
-            margin-top: 12px;
-            color: white;
-            margin-left: 12px;
-        }
+.add-button:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
 
-        .fotter-section {
-            background-color: whitesmoke;
-            /* height: 40vh; */
-            text-align: center;
-        }
+.best-card, .card {
+    border: 1px solid black;
+    border-radius: 14px;
+    cursor: pointer;
+    width: 200px; /* Uniform width for all cards */
+    height: 300px; /* Uniform height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
 
-        .fotter-heading {
-            color: black;
-            font-family: "Anton SC", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 22px;
-            text-align: center;
-        }
+.cart-icon-nav {
+    height: 25px;
+    width: 25px;
+    margin-top: 12px;
+    color: white;
+    margin-left: 12px;
+}
 
-        .fotter-content {
-            color: black;
-            font-style: normal;
-            font-size: 16px;
-            text-align: center;
-        }
+.fotter-section {
+    background-color: whitesmoke;
+    text-align: center;
+}
 
-        .mail-icon {
-            padding-left: 4px;
-        }
+.fotter-content {
+    color: black;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+}
 
-        .linkedin-icon {
-            margin-left: 4px;
-        }
+.mail-icon {
+    padding-left: 4px;
+}
 
-        .body-image {
-            height: 120px;
-            width: 120px;
-            border-radius: 50%;
-            border: 1px solid black;
-            cursor: pointer;
-        }
-        .card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            display: inline-block;
-            width: 200px;
-            text-align: center;
-        }
-        .cart-icon {
-            font-size: 18px;
-            padding-left: 4px;
-            background-color: transparent;
-            border-style: none;
-        }
-        .cart-icon-nav{
-            font-size: 22px;
-            margin-top: 8px;
-            background-color: transparent;
-            border-style: none;
-        }
-        .cart-icon-container {
-            position: relative;
-            display: inline-block;
-        }
-        .cart-count {
-            position: absolute;
-            top: -6px;
-            right: -10px;
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 4px 10px;
-            font-size: 10px;
-        }
-       
-        .copy-right{
-            background-color:#01001e;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .copy-heading
-        {
-            color: white;
-        }
-        hr{
-            border:1px solid black;
-            width: 100%;
-        }   
-        .navbar-toggler-icon {
-            filter: brightness(0) invert(1); 
-            border: 1px solid white;
-            border-radius: 2px;
-            padding: 6px;
-            height: 35px;
-            width: 35px;
-        }
+.linkedin-icon {
+    margin-left: 4px;
+}
+
+.body-image {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 18px;
+    padding-left: 4px;
+    background-color: transparent;
+    border-style: none;
+}
+
+.cart-icon-nav {
+    font-size: 22px;
+    margin-top: 8px;
+    background-color: transparent;
+    border-style: none;
+}
+
+.cart-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 10px;
+    font-size: 10px;
+}
+
+.copy-right {
+    background-color: #01001e;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy-heading {
+    color: white;
+}
+
+hr {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 6px;
+    height: 35px;
+    width: 35px;
+}
     </style>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <a class="navbar-brand" id="logo" href="#">
